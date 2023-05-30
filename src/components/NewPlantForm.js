@@ -38,7 +38,7 @@ function NewPlantForm({ plants, setPlants }) {
 
   return (
     <div className="new-plant-form">
-      <h2>New Plant</h2>g
+      <h2>New Plant</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
