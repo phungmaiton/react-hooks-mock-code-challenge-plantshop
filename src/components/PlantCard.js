@@ -12,7 +12,7 @@ function PlantCard({ name, image, price }) {
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <p>Price: {price}</p>
-      <button onClick={handleStock} className="primary">
+      <button onClick={handleStock} className={outOfStock ? "primary" : null}>
         {outOfStock ? "Out of Stock" : "In Stock"}
       </button>
     </li>
