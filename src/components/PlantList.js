@@ -1,9 +1,24 @@
-import React from "react";
 import PlantCard from "./PlantCard";
+import { useState } from "react";
+function PlantList({ plants, setPlants }) {
+  // const handleStockChange = () => {
+  //   setOutOfStock(!outOfStock);
 
-function PlantList() {
+  //   console.log(outOfStock);
+  // };
+
   return (
-    <ul className="cards">{/* render PlantCards components in here */}</ul>
+    <ul className="cards">
+      {plants.map((plant) => (
+        <PlantCard
+          key={plant.id}
+          name={plant.name}
+          image={plant.image}
+          price={plant.price}
+          // onStockChange={handleStockChange}
+        />
+      ))}
+    </ul>
   );
 }
 
